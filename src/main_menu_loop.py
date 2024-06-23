@@ -17,9 +17,9 @@ class MainMenuLoop:
                     self.running = False
                 if event.type == pg.MOUSEBUTTONDOWN:
                     if self.main_menu_view.single_player.is_clicked():
-                        Game_Loop(self.screen)
+                        Game_Loop(self.screen, 'single')
                     if self.main_menu_view.multiplayer.is_clicked():
-                        print("Multiplayer")
+                        Game_Loop(self.screen, 'multiplayer')
                     if self.main_menu_view.settings.is_clicked():
                         print("Settings")
                     if self.main_menu_view.high_scores.is_clicked():

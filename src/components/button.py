@@ -31,13 +31,14 @@ class Button:
                 aux.append(arg)
             args = aux
 
-            self.rect = pg.Rect(args[0], args[1], args[2], args[3])
-            self.text = args[4]
-            self.font = args[5]
-            self.color = args[6]
-            self.hover_color = args[7] if len(args) >= 8 else self.color
-            self.text_color = args[8] if len(args) >= 9 else BLACK
-            self.hover_alt_text_color = args[9] if len(args) == 10 else self.text_color
+        self.rect = pg.Rect(args[0], args[1], args[2], args[3])#how catch error here?
+
+        self.text = args[4]
+        self.font = args[5]
+        self.color = args[6]
+        self.hover_color = args[7] if len(args) >= 8 else self.color
+        self.text_color = args[8] if len(args) >= 9 else BLACK
+        self.hover_alt_text_color = args[9] if len(args) == 10 else self.text_color
 
 
     
