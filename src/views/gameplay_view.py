@@ -1,7 +1,7 @@
 import math
 import random
 import pygame as pg
-from utils import constants
+from src import constants
 
 class GameplayView:
     template_name = 'gameplay.html'
@@ -10,7 +10,7 @@ class GameplayView:
         pass
 
     def draw_board(self, screen, board, sectors):
-        screen.fill((0, 0, 0))
+        screen.fill(constants.BLACK)
         #Board
         R = int((math.sin(pg.time.get_ticks()/1000)**2)*255)
         G = int((math.cos(pg.time.get_ticks()/1000)**2)*255)
@@ -27,5 +27,4 @@ class GameplayView:
         for n in range(9):
             if board[n] != '':
                 screen.blit(pg.font.SysFont('Arial', 50).render(board[n], True, (255, 255, 255)), (sectors[n].centerx-15, sectors[n].centery-30))
-                pg.draw.rect(screen, (255, 255, 255), sectors[n], 5)
 
